@@ -2,11 +2,19 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Run Kotlin",
+      "label": "Compile Kotlin",
       "type": "shell",
-      "command": "kotlinc src/Main.kt -include-runtime -d main.jar && java -jar main.jar",
+      "command": "kotlinc src/Main.kt -include-runtime -d out/main.jar",
       "group": "build",
       "problemMatcher": []
+    },
+    {
+      "label": "Run Kotlin",
+      "type": "shell",
+      "command": "java -jar out/main.jar",
+      "group": "build",
+      "problemMatcher": [],
+      "dependsOn": ["Compile Kotlin"]
     }
   ]
 }
