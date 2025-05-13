@@ -8,4 +8,6 @@ brew install kotlin
 
 ```shell
 scoop install kotlin
+scoop bucket add java
+scoop install java/openjdk
 ```
